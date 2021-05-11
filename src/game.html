@@ -251,20 +251,34 @@
         const vscode = acquireVsCodeApi();
         var gameArr = [0, 0, 0, 0, 0, 0, 0, 0, 0];
         var moves = 0;
+        var blocked = 0;
 
-        function reset(winner) {
-            console.log(`${winner} wins`);
-            var winPerson = (winner == 1) ? "You win" : "Bot wins";
-            vscode.postMessage({
-                command: 'alert',
-                text: `${winPerson} this game!`
-            })
+        function restart() {
+            blocked = 0;
             gameArr = [0, 0, 0, 0, 0, 0, 0, 0, 0];
             var moves = 0;
             for (var i = 0; i < 9; i++) {
                 document.getElementById(`x${i}`).style.visibility = "hidden";
                 document.getElementById(`o${i}`).style.visibility = "hidden";
             }
+            vscode.postMessage({
+                command: 'info',
+                text: `Your move again X`
+            })
+        }
+
+        function reset(winner) {
+            console.log(`${winner} wins`);
+            var winPerson = (winner != 2) ? ((winner == 1) ? "You win" : "No one wins") : "Bot wins";
+            vscode.postMessage({
+                command: 'info',
+                text: `${winPerson} this game`
+            })
+            blocked = 1;
+            vscode.postMessage({
+                command: 'play-again',
+                text: 'Play again?'
+            })
         }
 
         function checkWin() {
@@ -315,6 +329,9 @@
         function userMove(event) {
             var id = event.target.id;
             var box = id[1];
+            if (blocked) {
+                return;
+            }
             if (gameArr[parseInt(box)] == 0) {
                 document.getElementById(`x${box}`).style.visibility = "visible";
                 gameArr[box] = 1;
@@ -349,23 +366,14 @@
             document.getElementById(`z${i}`).addEventListener("click", userMove);
         }
 
-
-        // (function () {
-        //     const counter = document.getElementById('lines-of-code-counter');
-
-        //     let count = 0;
-        //     setInterval(() => {
-        //         counter.textContent = count++;
-
-        //         // Alert the extension when our cat introduces a bug
-        //         if (Math.random() < 0.001 * count) {
-        //             vscode.postMessage({
-        //                 command: 'alert',
-        //                 text: '🐛  on line ' + count
-        //             })
-        //         }
-        //     }, 100);
-        // }())
+        window.addEventListener('message', event => {
+            const message = event.data; // The JSON data our extension sent
+            switch (message.command) {
+                case 'restart':
+                    restart();
+                    break;
+            }
+        });
     </script>
 </body>
 

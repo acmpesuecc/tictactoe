@@ -15,13 +15,26 @@ export function activate(context: vscode.ExtensionContext) {
 		const filePath: vscode.Uri = vscode.Uri.file(path.join(context.extensionPath, 'src', 'game.html'));
 		panel.webview.html = fs.readFileSync(filePath.fsPath, 'utf8');
 
+		vscode.window.showInformationMessage("Let's begin! Your move X");
+
+		function restartGame(response: string) {
+			if (response == "Yes") {
+				panel.webview.postMessage({ command: 'restart' });
+			}
+			else {
+				panel.dispose()
+			}
+		}
+
 		// Handle messages from the webview
 		panel.webview.onDidReceiveMessage(
 			message => {
 				switch (message.command) {
-					case 'alert':
+					case 'info':
 						vscode.window.showInformationMessage(message.text);
 						return;
+					case 'play-again':
+						vscode.window.showInformationMessage(message.text, "Yes", "No").then(restartGame);
 				}
 			},
 			undefined,
