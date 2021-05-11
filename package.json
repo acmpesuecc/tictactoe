@@ -3,6 +3,12 @@
 	"displayName": "TicTacToe",
 	"description": "Play TicTacToe inside VSCode while your code compiles",
 	"version": "0.0.1",
+	"publisher": "srujandeshpande",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/srujandeshpande/tictactoe"
+	},
 	"engines": {
 		"vscode": "^1.56.0"
 	},
@@ -17,7 +23,8 @@
 		"commands": [
 			{
 				"command": "tictactoe.start",
-				"title": "Start a new TicTacToe game"
+				"title": "Start a new TicTacToe game",
+				"category": "TicTacToe"
 			}
 		]
 	},
