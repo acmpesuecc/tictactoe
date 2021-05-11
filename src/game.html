@@ -57,6 +57,14 @@
             border: 1px solid #FFFFFF;
         }
 
+        .zone {
+            /* Line 4 */
+            position: absolute;
+            width: 84px;
+            height: 84px;
+            border: 1px solid #882929;
+        }
+
         .p0 {
             position: absolute;
             width: 84.85px;
@@ -128,99 +136,149 @@
             margin-top: 375px;
             margin-left: 377px;
         }
+
+        .x,
+        .o {
+            visibility: hidden;
+        }
     </style>
 </head>
 
 <body>
     <div id="backboard">
+
         <div id="hl1"></div>
         <div id="hl2"></div>
+
         <div id="vl1"></div>
         <div id="vl2"></div>
-        <svg id="x0" class="p0" width="87" height="86" viewBox="0 0 87 86" fill="none"
+
+        <svg id="x0" class="p0 x" width="87" height="86" viewBox="0 0 87 86" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <line x1="1.35355" y1="0.646447" x2="86.2064" y2="85.4993" stroke="white" />
             <line x1="0.646447" y1="85.4993" x2="85.4993" y2="0.646448" stroke="white" />
         </svg>
-        <svg id="x1" width="87" class="p1" height="86" viewBox="0 0 87 86" fill="none"
+        <svg id="x1" class="p1 x" width="87" height="86" viewBox="0 0 87 86" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <line x1="1.35355" y1="0.646447" x2="86.2064" y2="85.4993" stroke="white" />
             <line x1="0.646447" y1="85.4993" x2="85.4993" y2="0.646448" stroke="white" />
         </svg>
-        <svg id="x2" class="p2" width="87" height="86" viewBox="0 0 87 86" fill="none"
+        <svg id="x2" class="p2 x" width="87" height="86" viewBox="0 0 87 86" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <line x1="1.35355" y1="0.646447" x2="86.2064" y2="85.4993" stroke="white" />
             <line x1="0.646447" y1="85.4993" x2="85.4993" y2="0.646448" stroke="white" />
         </svg>
-        <svg id="x3" class="p3" width="87" height="86" viewBox="0 0 87 86" fill="none"
+        <svg id="x3" class="p3 x" width="87" height="86" viewBox="0 0 87 86" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <line x1="1.35355" y1="0.646447" x2="86.2064" y2="85.4993" stroke="white" />
             <line x1="0.646447" y1="85.4993" x2="85.4993" y2="0.646448" stroke="white" />
         </svg>
-        <svg id="x4" class="p4" width="87" height="86" viewBox="0 0 87 86" fill="none"
+        <svg id="x4" class="p4 x" width="87" height="86" viewBox="0 0 87 86" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <line x1="1.35355" y1="0.646447" x2="86.2064" y2="85.4993" stroke="white" />
             <line x1="0.646447" y1="85.4993" x2="85.4993" y2="0.646448" stroke="white" />
         </svg>
-        <svg id="x5" class="p5" width="87" height="86" viewBox="0 0 87 86" fill="none"
+        <svg id="x5" class="p5 x" width="87" height="86" viewBox="0 0 87 86" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <line x1="1.35355" y1="0.646447" x2="86.2064" y2="85.4993" stroke="white" />
             <line x1="0.646447" y1="85.4993" x2="85.4993" y2="0.646448" stroke="white" />
         </svg>
-        <svg id="x6" class="p6" width="87" height="86" viewBox="0 0 87 86" fill="none"
+        <svg id="x6" class="p6 x" width="87" height="86" viewBox="0 0 87 86" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <line x1="1.35355" y1="0.646447" x2="86.2064" y2="85.4993" stroke="white" />
             <line x1="0.646447" y1="85.4993" x2="85.4993" y2="0.646448" stroke="white" />
         </svg>
-        <svg id="x7" class="p7" width="87" height="86" viewBox="0 0 87 86" fill="none"
+        <svg id="x7" class="p7 x" width="87" height="86" viewBox="0 0 87 86" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <line x1="1.35355" y1="0.646447" x2="86.2064" y2="85.4993" stroke="white" />
             <line x1="0.646447" y1="85.4993" x2="85.4993" y2="0.646448" stroke="white" />
         </svg>
-        <svg id="x8" class="p8" width="87" height="86" viewBox="0 0 87 86" fill="none"
+        <svg id="x8" class="p8 x" width="87" height="86" viewBox="0 0 87 86" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <line x1="1.35355" y1="0.646447" x2="86.2064" y2="85.4993" stroke="white" />
             <line x1="0.646447" y1="85.4993" x2="85.4993" y2="0.646448" stroke="white" />
         </svg>
 
-        <svg id="o0" class="p0" width="110" height="110" viewBox="0 0 110 110" fill="none"
+        <svg id="o0" class="p0 o" width="110" height="110" viewBox="0 0 110 110" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <circle cx="55" cy="55" r="54.5" stroke="white" />
         </svg>
-        <svg id="o1" class="p1" width="110" height="110" viewBox="0 0 110 110" fill="none"
+        <svg id="o1" class="p1 o" width="110" height="110" viewBox="0 0 110 110" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <circle cx="55" cy="55" r="54.5" stroke="white" />
         </svg>
-        <svg id="o2" class="p2" width="110" height="110" viewBox="0 0 110 110" fill="none"
+        <svg id="o2" class="p2 o" width="110" height="110" viewBox="0 0 110 110" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <circle cx="55" cy="55" r="54.5" stroke="white" />
         </svg>
-        <svg id="o3" class="p3" width="110" height="110" viewBox="0 0 110 110" fill="none"
+        <svg id="o3" class="p3 o" width="110" height="110" viewBox="0 0 110 110" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <circle cx="55" cy="55" r="54.5" stroke="white" />
         </svg>
-        <svg id="o4" class="p4" width="110" height="110" viewBox="0 0 110 110" fill="none"
+        <svg id="o4" class="p4 o" width="110" height="110" viewBox="0 0 110 110" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <circle cx="55" cy="55" r="54.5" stroke="white" />
         </svg>
-        <svg id="o5" class="p5" width="110" height="110" viewBox="0 0 110 110" fill="none"
+        <svg id="o5" class="p5 o" width="110" height="110" viewBox="0 0 110 110" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <circle cx="55" cy="55" r="54.5" stroke="white" />
         </svg>
-        <svg id="o6" class="p6" width="110" height="110" viewBox="0 0 110 110" fill="none"
+        <svg id="o6" class="p6 o" width="110" height="110" viewBox="0 0 110 110" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <circle cx="55" cy="55" r="54.5" stroke="white" />
         </svg>
-        <svg id="o7" class="p7" width="110" height="110" viewBox="0 0 110 110" fill="none"
+        <svg id="o7" class="p7 o" width="110" height="110" viewBox="0 0 110 110" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <circle cx="55" cy="55" r="54.5" stroke="white" />
         </svg>
-        <svg id="o8" class="p8" width="110" height="110" viewBox="0 0 110 110" fill="none"
+        <svg id="o8" class="p8 o" width="110" height="110" viewBox="0 0 110 110" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <circle cx="55" cy="55" r="54.5" stroke="white" />
         </svg>
+
+        <div id="z0" class="p0 zone"></div>
+        <div id="z1" class="p1 zone"></div>
+        <div id="z2" class="p2 zone"></div>
+        <div id="z3" class="p3 zone"></div>
+        <div id="z4" class="p4 zone"></div>
+        <div id="z5" class="p5 zone"></div>
+        <div id="z6" class="p6 zone"></div>
+        <div id="z7" class="p7 zone"></div>
+        <div id="z8" class="p8 zone"></div>
 
     </div>
+    <script>
+        const vscode = acquireVsCodeApi();
+        var gameArr = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+        function userMove(event) {
+            var id = event.target.id;
+            var box = id[1];
+            document.getElementById(`x${box}`).style.visibility = "visible";
+        }
+        // x=1, o=2, blank = 0
+        for (var i = 0; i < 9; i++) {
+            document.getElementById(`z${i}`).addEventListener("click", userMove);
+        }
+
+
+        // (function () {
+        //     const counter = document.getElementById('lines-of-code-counter');
+
+        //     let count = 0;
+        //     setInterval(() => {
+        //         counter.textContent = count++;
+
+        //         // Alert the extension when our cat introduces a bug
+        //         if (Math.random() < 0.001 * count) {
+        //             vscode.postMessage({
+        //                 command: 'alert',
+        //                 text: '🐛  on line ' + count
+        //             })
+        //         }
+        //     }, 100);
+        // }())
+    </script>
 </body>
 
 </html>

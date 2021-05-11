@@ -9,11 +9,12 @@ export function activate(context: vscode.ExtensionContext) {
 			'tictactoe', // Identifies the type of the webview. Used internally
 			'TicTacToe', // Title of the panel displayed to the user
 			vscode.ViewColumn.One, // Editor column to show the new webview panel in.
-			{} // Webview options. More on these later.
+			{ enableScripts: true } // Webview options. More on these later.
 		);
 		// panel.webview.html = getWebviewContent();
 		const filePath: vscode.Uri = vscode.Uri.file(path.join(context.extensionPath, 'src', 'game.html'));
 		panel.webview.html = fs.readFileSync(filePath.fsPath, 'utf8');
+
 	});
 	context.subscriptions.push(disposable);
 }
