@@ -17,7 +17,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 		vscode.window.showInformationMessage("Let's begin! Your move X");
 
-		function restartGame(response: string) {
+		function restartGame(response: string | undefined) {
 			if (response == "Yes") {
 				panel.webview.postMessage({ command: 'restart' });
 			}
@@ -34,7 +34,7 @@ export function activate(context: vscode.ExtensionContext) {
 						vscode.window.showInformationMessage(message.text);
 						return;
 					case 'play-again':
-						vscode.window.showInformationMessage(message.text, "Yes", "No").then(restartGame);
+						vscode.window.showInformationMessage(message.text, "Yes", "No").then(response => restartGame(response));
 				}
 			},
 			undefined,
