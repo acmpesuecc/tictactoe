@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <style>
+        #backboard {
+            /* Rectangle 1 */
+            position: absolute;
+            width: 500px;
+            height: 500px;
+
+            background: #000000;
+        }
+
+        #vl1 {
+            /* Line 2 */
+            position: absolute;
+            width: 450px;
+            height: 0px;
+
+            border: 1px solid #FFFFFF;
+            transform: rotate(90deg);
+        }
+
+        #vl2 {
+            /* Line 1 */
+            position: absolute;
+            width: 450px;
+            height: 0px;
+
+            border: 1px solid #FFFFFF;
+            transform: rotate(90deg);
+        }
+
+        #hl1 {
+            /* Line 3 */
+            position: absolute;
+            width: 450px;
+            height: 0px;
+
+            border: 1px solid #FFFFFF;
+        }
+
+        #hl2 {
+            /* Line 4 */
+            position: absolute;
+            width: 450px;
+            height: 0px;
+
+            border: 1px solid #FFFFFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="backboard">
+        <div id="hl1"></div>
+        <div id="hl2"></div>
+        <div id="vl1"></div>
+        <div id="vl2"></div>
+    </div>
+</body>
+
+</html>
