@@ -254,6 +254,11 @@
 
         function reset(winner) {
             console.log(`${winner} wins`);
+            var winPerson = (winner == 1) ? "You win" : "Bot wins";
+            vscode.postMessage({
+                command: 'alert',
+                text: `${winPerson} this game!`
+            })
             gameArr = [0, 0, 0, 0, 0, 0, 0, 0, 0];
             var moves = 0;
             for (var i = 0; i < 9; i++) {

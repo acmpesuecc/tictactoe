@@ -15,6 +15,19 @@ export function activate(context: vscode.ExtensionContext) {
 		const filePath: vscode.Uri = vscode.Uri.file(path.join(context.extensionPath, 'src', 'game.html'));
 		panel.webview.html = fs.readFileSync(filePath.fsPath, 'utf8');
 
+		// Handle messages from the webview
+		panel.webview.onDidReceiveMessage(
+			message => {
+				switch (message.command) {
+					case 'alert':
+						vscode.window.showInformationMessage(message.text);
+						return;
+				}
+			},
+			undefined,
+			context.subscriptions
+		);
+
 	});
 	context.subscriptions.push(disposable);
 }
