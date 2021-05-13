@@ -1,0 +1,127 @@
+#backboard {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #000000;
+}
+
+#vl1 {
+    position: absolute;
+    width: 500px;
+    height: 0px;
+    margin-top: 250px;
+    margin-left: -83.33px;
+    border: 1px solid #FFFFFF;
+    transform: rotate(90deg);
+}
+
+#vl2 {
+    position: absolute;
+    width: 500px;
+    height: 0px;
+    margin-top: 250px;
+    margin-left: 83.33px;
+    border: 1px solid #FFFFFF;
+    transform: rotate(90deg);
+}
+
+#hl1 {
+    position: absolute;
+    width: 500px;
+    height: 0px;
+    margin-top: 166px;
+    border: 1px solid #FFFFFF;
+}
+
+#hl2 {
+    position: absolute;
+    width: 500px;
+    height: 0px;
+    margin-top: 334px;
+    border: 1px solid #FFFFFF;
+}
+
+.zone {
+    position: absolute;
+    width: 84px;
+    height: 84px;
+    /* Uncomment the line below to view the clickable zone to accept a move */
+    /* border: 1px solid #882929; */
+}
+
+.p0 {
+    position: absolute;
+    width: 84.85px;
+    height: 84.85px;
+    margin-top: 42px;
+    margin-left: 42px;
+}
+
+.p1 {
+    position: absolute;
+    width: 84.85px;
+    height: 84.85px;
+    margin-top: 42px;
+    margin-left: 208px;
+}
+
+.p2 {
+    position: absolute;
+    width: 84.85px;
+    height: 84.85px;
+    margin-top: 42px;
+    margin-left: 377px;
+}
+
+.p3 {
+    position: absolute;
+    width: 84.85px;
+    height: 84.85px;
+    margin-top: 210px;
+    margin-left: 42px;
+}
+
+.p4 {
+    position: absolute;
+    width: 84.85px;
+    height: 84.85px;
+    margin-top: 210px;
+    margin-left: 208px;
+}
+
+.p5 {
+    position: absolute;
+    width: 84.85px;
+    height: 84.85px;
+    margin-top: 210px;
+    margin-left: 377px;
+}
+
+.p6 {
+    position: absolute;
+    width: 84.85px;
+    height: 84.85px;
+    margin-top: 375px;
+    margin-left: 42px;
+}
+
+.p7 {
+    position: absolute;
+    width: 84.85px;
+    height: 84.85px;
+    margin-top: 375px;
+    margin-left: 208px;
+}
+
+.p8 {
+    position: absolute;
+    width: 84.85px;
+    height: 84.85px;
+    margin-top: 375px;
+    margin-left: 377px;
+}
+
+.x,
+.o {
+    visibility: hidden;
+}
