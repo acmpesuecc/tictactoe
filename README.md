@@ -20,3 +20,6 @@ Head to the Command Palette and search for `Start a new TicTacToe game` to get s
 ## Future Upgrades
 
 Upgraded AI and multiplayer coming soon!
+
+## Contributing
+Checkout the [Contributing Guildelines](https://github.com/acmpesuecc/tictactoe/blob/master/CONTRIBUTING.md)
