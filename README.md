@@ -23,3 +23,8 @@ Upgraded AI and multiplayer coming soon!
 
 ## Contributing
 Checkout the [Contributing Guildelines](https://github.com/acmpesuecc/tictactoe/blob/master/CONTRIBUTING.md)
+
+## How to run
+yarn install
+click fn+F5 key
+click Debug anyway
