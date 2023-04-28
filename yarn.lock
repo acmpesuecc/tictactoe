@@ -1137,11 +1137,6 @@ he@1.2.0:
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
-html-knit@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/html-knit/-/html-knit-0.0.1.tgz#7be89da2e7edce085db541682ae810419b39b140"
-  integrity sha512-Fg62vi1aCtQ3ZawOAB5TxMhm9j/Wq7aX9BLYJuWteKj3P0zRMgAT5flGWZrLDeUj1FqCJ07W9scTVciYUUYDdg==
-
 http-proxy-agent@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/http-proxy-agent/-/http-proxy-agent-4.0.1.tgz#8a8c8ef7f5932ccf953c296ca8291b95aa74aa3a"
