@@ -244,6 +244,7 @@
         var gameArr = [0, 0, 0, 0, 0, 0, 0, 0, 0];
         var moves = 0;
         var blocked = 0;
+        const delay = (ms) => new Promise(res => setTimeout(res, ms));
 
         function restart() {
             blocked = 0;
@@ -360,6 +361,7 @@
 
         window.addEventListener('message', event => {
             const message = event.data; // The JSON data our extension sent
+
             switch (message.command) {
                 case 'restart':
                     restart();
