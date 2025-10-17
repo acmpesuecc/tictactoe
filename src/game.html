@@ -336,7 +336,16 @@
                     if (moves == 9) {
                         console.log("Game over");
                         reset(0);
+                        return; // Stop execution if it's a draw
                     }
+
+                    // 1. Block user input while computer "thinks"
+                    blocked = 1;
+
+                    // 2. Add the delay (e.g., 750 milliseconds)
+                    await delay(750); 
+
+                    // 3. Find a valid computer move
                     var move = -1;
                     while (move == -1) {
                         move = Math.floor(Math.random() * 8);
@@ -347,10 +356,17 @@
                             move = -1;
                         }
                     }
+
+                    // 4. Make the move
                     moves++;
                     gameArr[move] = 2;
                     document.getElementById(`o${move}`).style.visibility = "visible";
-                    checkWin();
+                    
+                    // 5. Check for a win and unblock if game is not over
+                    let isGameOver = checkWin();
+                    if (isGameOver == 0) { // If game is NOT over
+                        blocked = 0; // Unblock for user's next turn
+                    }
                 }
             }
         }
